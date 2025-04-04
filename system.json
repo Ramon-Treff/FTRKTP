@@ -1,0 +1,25 @@
+{
+  "id": "FTRKTP",
+  "title": "FEED THE RICH AND KILL THE POOR",
+  "description": "A system for playing a game about the rich and the poor.",
+  "version": "6.9",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 12
+  },
+  "authors": [
+    {
+      "name": "me"
+    }
+  ],
+  "esmodules": ["index.mjs"],
+  "styles": ["styles/style.css", "styles/guy-actor-sheet.css"],
+  "documentTypes": {
+    "Actor": {
+      "genderNeutralGuy": {}
+    },
+    "Item": {
+      "item": {}
+    }
+  }
+}

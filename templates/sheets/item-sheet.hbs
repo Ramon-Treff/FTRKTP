@@ -1,0 +1,15 @@
+<form class="item-sheet {{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <h1>{{item.name}}</h1>
+  </header>
+  <div class="sheet-body">
+    <div class="form-group">
+      <label for="name">{{localize "Name"}}</label>
+      <input type="text" name="name" value="{{item.name}}" />
+    </div>
+    <div class="form-group">
+      <label for="system.description">{{localize "Description"}}</label>
+      <textarea name="system.description">{{item.system.description}}</textarea>
+    </div>
+  </div>
+</form>
