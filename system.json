@@ -21,5 +21,8 @@
     "Item": {
       "item": {}
     }
-  }
+  },
+  "url": "https://github.com/Ramon-Treff/FTRKTP",
+  "manifest": "https://raw.githubusercontent.com/Ramon-Treff/FTRKTP/refs/heads/master/system.json",
+  "download": "https://github.com/Ramon-Treff/FTRKTP/archive/refs/heads/master.zip"
 }
