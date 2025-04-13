@@ -44,224 +44,225 @@
   </header>
 
   <section class="char-details">
-    <div class="attributes">
-      <div class="stats-wrapper">
-        <h1>Stats</h1>
-        <div class="stats">
-          <div class="stat">
-            <input
-              id="body"
-              name="system.stats.body"
-              type="number"
-              value="{{actor.system.stats.body}}"
-            />
-            <label for="body">BODY</label>
-          </div>
-          <div class="stat">
-            <input
-              id="pace"
-              name="system.stats.pace"
-              type="number"
-              value="{{actor.system.stats.pace}}"
-            />
-            <label for="pace">PACE</label>
-          </div>
-          <div class="stat">
-            <input
-              id="mind"
-              name="system.stats.mind"
-              type="number"
-              value="{{actor.system.stats.mind}}"
-            />
-            <label for="mind">MIND</label>
-          </div>
-          <div class="stat">
-            <input
-              id="aura"
-              name="system.stats.aura"
-              type="number"
-              value="{{actor.system.stats.aura}}"
-            />
-            <label for="aura">AURA</label>
+    <div class="">
+      <h1>Attributes</h1>
+      <div class="attributes">
+        <div class="stats-wrapper">
+          <div class="stats">
+            <div class="stat">
+              <input
+                id="body"
+                name="system.stats.body"
+                type="number"
+                value="{{actor.system.stats.body}}"
+              />
+              <label for="body">BODY</label>
+            </div>
+            <div class="stat">
+              <input
+                id="pace"
+                name="system.stats.pace"
+                type="number"
+                value="{{actor.system.stats.pace}}"
+              />
+              <label for="pace">PACE</label>
+            </div>
+            <div class="stat">
+              <input
+                id="mind"
+                name="system.stats.mind"
+                type="number"
+                value="{{actor.system.stats.mind}}"
+              />
+              <label for="mind">MIND</label>
+            </div>
+            <div class="stat">
+              <input
+                id="aura"
+                name="system.stats.aura"
+                type="number"
+                value="{{actor.system.stats.aura}}"
+              />
+              <label for="aura">AURA</label>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="skills-wrapper">
-        <h1>Skills</h1>
-        <div class="skills">
-          <div class="skill">
-            <span class="skill-number">{{sum
-                actor.system.stats.body
-                actor.system.stats.pace
-              }}</span>
-            <input
-              name="system.attributeModifiers.fit"
-              type="number"
-              class="skill-number"
-              value="{{actor.system.attributeModifiers.fit}}"
-            />
-            <span class="skill-number">{{sum
-                actor.system.stats.body
-                actor.system.stats.pace
-                actor.system.attributeModifiers.fit
-              }}</span>
-            <span class="skill-name">
-              Fit
-            </span>
-            <a
-              class="item-roll skill-icon fas fa-dice-d10"
-              data-skill="fit"
-              data-skill-value="{{sum
-                actor.system.stats.body
-                actor.system.stats.pace
-                actor.system.attributeModifiers.fit
-              }}"
-            ></a>
-          </div>
-          <div class="skill">
-            <span class="skill-number">{{sum
-                actor.system.stats.body
-                actor.system.stats.mind
-              }}</span>
-            <input
-              name="system.attributeModifiers.will"
-              type="number"
-              class="skill-number"
-              value="{{actor.system.attributeModifiers.will}}"
-            />
-            <span class="skill-number">{{sum
-                actor.system.stats.body
-                actor.system.stats.mind
-                actor.system.attributeModifiers.will
-              }}</span>
-            <span class="skill-name">
-              Will
-            </span>
-            <a
-              class="item-roll skill-icon fas fa-dice-d10"
-              data-skill="will"
-              data-skill-value="{{sum
-                actor.system.stats.body
-                actor.system.stats.mind
-                actor.system.attributeModifiers.will
-              }}"
-            ></a>
-          </div>
-          <div class="skill">
-            <span class="skill-number">{{sum
-                actor.system.stats.body
-                actor.system.stats.aura
-              }}</span>
-            <input
-              name="system.attributeModifiers.hot"
-              type="number"
-              class="skill-number"
-              value="{{actor.system.attributeModifiers.hot}}"
-            />
-            <span class="skill-number">{{sum
-                actor.system.stats.body
-                actor.system.stats.aura
-                actor.system.attributeModifiers.hot
-              }}</span>
-            <span class="skill-name">
-              Hot
-            </span>
-            <a
-              class="item-roll skill-icon fas fa-dice-d10"
-              data-skill="hot"
-              data-skill-value="{{sum
-                actor.system.stats.body
-                actor.system.stats.aura
-                actor.system.attributeModifiers.hot
-              }}"
-            ></a>
-          </div>
-          <div class="skill">
-            <span class="skill-number">{{sum
-                actor.system.stats.mind
-                actor.system.stats.pace
-              }}</span>
-            <input
-              name="system.attributeModifiers.precision"
-              type="number"
-              class="skill-number"
-              value="{{actor.system.attributeModifiers.precision}}"
-            />
-            <span class="skill-number">{{sum
-                actor.system.stats.mind
-                actor.system.stats.pace
-                actor.system.attributeModifiers.precision
-              }}</span>
-            <span class="skill-name">
-              Precision
-            </span>
-            <a
-              class="item-roll skill-icon fas fa-dice-d10"
-              data-skill="precision"
-              data-skill-value="{{sum
-                actor.system.stats.mind
-                actor.system.stats.pace
-                actor.system.attributeModifiers.precision
-              }}"
-            ></a>
-          </div>
-          <div class="skill">
-            <span class="skill-number">{{sum
-                actor.system.stats.pace
-                actor.system.stats.aura
-              }}</span>
-            <input
-              name="system.attributeModifiers.trick"
-              type="number"
-              class="skill-number"
-              value="{{actor.system.attributeModifiers.trick}}"
-            />
-            <span class="skill-number">{{sum
-                actor.system.stats.pace
-                actor.system.stats.aura
-                actor.system.attributeModifiers.trick
-              }}</span>
-            <span class="skill-name">
-              Trick
-            </span>
-            <a
-              class="item-roll skill-icon fas fa-dice-d10"
-              data-skill="trick"
-              data-skill-value="{{sum
-                actor.system.stats.pace
-                actor.system.stats.aura
-                actor.system.attributeModifiers.trick
-              }}"
-            ></a>
-          </div>
-          <div class="skill">
-            <span class="skill-number">{{sum
-                actor.system.stats.aura
-                actor.system.stats.mind
-              }}</span>
-            <input
-              name="system.attributeModifiers.confidence"
-              type="number"
-              class="skill-number"
-              value="{{actor.system.attributeModifiers.confidence}}"
-            />
-            <span class="skill-number">{{sum
-                actor.system.stats.aura
-                actor.system.stats.mind
-                actor.system.attributeModifiers.confidence
-              }}</span>
-            <span class="skill-name">
-              Confidence
-            </span>
-            <a
-              class="item-roll skill-icon fas fa-dice-d10"
-              data-skill="confidence"
-              data-skill-value="{{sum
-                actor.system.stats.aura
-                actor.system.stats.mind
-                actor.system.attributeModifiers.confidence
-              }}"
-            ></a>
+        <div class="skills-wrapper">
+          <div class="skills">
+            <div class="skill">
+              <span class="skill-number">{{sum
+                  actor.system.stats.body
+                  actor.system.stats.pace
+                }}</span>
+              <input
+                name="system.attributeModifiers.fit"
+                type="number"
+                class="skill-number"
+                value="{{actor.system.attributeModifiers.fit}}"
+              />
+              <span class="skill-number">{{sum
+                  actor.system.stats.body
+                  actor.system.stats.pace
+                  actor.system.attributeModifiers.fit
+                }}</span>
+              <span class="skill-name">
+                Fit
+              </span>
+              <a
+                class="item-roll skill-icon fas fa-dice-d10"
+                data-skill="fit"
+                data-skill-value="{{sum
+                  actor.system.stats.body
+                  actor.system.stats.pace
+                  actor.system.attributeModifiers.fit
+                }}"
+              ></a>
+            </div>
+            <div class="skill">
+              <span class="skill-number">{{sum
+                  actor.system.stats.body
+                  actor.system.stats.mind
+                }}</span>
+              <input
+                name="system.attributeModifiers.will"
+                type="number"
+                class="skill-number"
+                value="{{actor.system.attributeModifiers.will}}"
+              />
+              <span class="skill-number">{{sum
+                  actor.system.stats.body
+                  actor.system.stats.mind
+                  actor.system.attributeModifiers.will
+                }}</span>
+              <span class="skill-name">
+                Will
+              </span>
+              <a
+                class="item-roll skill-icon fas fa-dice-d10"
+                data-skill="will"
+                data-skill-value="{{sum
+                  actor.system.stats.body
+                  actor.system.stats.mind
+                  actor.system.attributeModifiers.will
+                }}"
+              ></a>
+            </div>
+            <div class="skill">
+              <span class="skill-number">{{sum
+                  actor.system.stats.body
+                  actor.system.stats.aura
+                }}</span>
+              <input
+                name="system.attributeModifiers.hot"
+                type="number"
+                class="skill-number"
+                value="{{actor.system.attributeModifiers.hot}}"
+              />
+              <span class="skill-number">{{sum
+                  actor.system.stats.body
+                  actor.system.stats.aura
+                  actor.system.attributeModifiers.hot
+                }}</span>
+              <span class="skill-name">
+                Hot
+              </span>
+              <a
+                class="item-roll skill-icon fas fa-dice-d10"
+                data-skill="hot"
+                data-skill-value="{{sum
+                  actor.system.stats.body
+                  actor.system.stats.aura
+                  actor.system.attributeModifiers.hot
+                }}"
+              ></a>
+            </div>
+            <div class="skill">
+              <span class="skill-number">{{sum
+                  actor.system.stats.mind
+                  actor.system.stats.pace
+                }}</span>
+              <input
+                name="system.attributeModifiers.precision"
+                type="number"
+                class="skill-number"
+                value="{{actor.system.attributeModifiers.precision}}"
+              />
+              <span class="skill-number">{{sum
+                  actor.system.stats.mind
+                  actor.system.stats.pace
+                  actor.system.attributeModifiers.precision
+                }}</span>
+              <span class="skill-name">
+                Precision
+              </span>
+              <a
+                class="item-roll skill-icon fas fa-dice-d10"
+                data-skill="precision"
+                data-skill-value="{{sum
+                  actor.system.stats.mind
+                  actor.system.stats.pace
+                  actor.system.attributeModifiers.precision
+                }}"
+              ></a>
+            </div>
+            <div class="skill">
+              <span class="skill-number">{{sum
+                  actor.system.stats.pace
+                  actor.system.stats.aura
+                }}</span>
+              <input
+                name="system.attributeModifiers.trick"
+                type="number"
+                class="skill-number"
+                value="{{actor.system.attributeModifiers.trick}}"
+              />
+              <span class="skill-number">{{sum
+                  actor.system.stats.pace
+                  actor.system.stats.aura
+                  actor.system.attributeModifiers.trick
+                }}</span>
+              <span class="skill-name">
+                Trick
+              </span>
+              <a
+                class="item-roll skill-icon fas fa-dice-d10"
+                data-skill="trick"
+                data-skill-value="{{sum
+                  actor.system.stats.pace
+                  actor.system.stats.aura
+                  actor.system.attributeModifiers.trick
+                }}"
+              ></a>
+            </div>
+            <div class="skill">
+              <span class="skill-number">{{sum
+                  actor.system.stats.aura
+                  actor.system.stats.mind
+                }}</span>
+              <input
+                name="system.attributeModifiers.confidence"
+                type="number"
+                class="skill-number"
+                value="{{actor.system.attributeModifiers.confidence}}"
+              />
+              <span class="skill-number">{{sum
+                  actor.system.stats.aura
+                  actor.system.stats.mind
+                  actor.system.attributeModifiers.confidence
+                }}</span>
+              <span class="skill-name">
+                Confidence
+              </span>
+              <a
+                class="item-roll skill-icon fas fa-dice-d10"
+                data-skill="confidence"
+                data-skill-value="{{sum
+                  actor.system.stats.aura
+                  actor.system.stats.mind
+                  actor.system.attributeModifiers.confidence
+                }}"
+              ></a>
+            </div>
           </div>
         </div>
       </div>
