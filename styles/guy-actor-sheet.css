@@ -52,7 +52,7 @@
 
   .attributes {
     display: grid;
-    gap: 1rem;
+    gap: 2rem 1rem;
     grid-template-columns: auto 1fr;
   }
 
@@ -159,6 +159,10 @@
   .stats-wrapper {
     display: grid;
     grid-template-rows: auto 1fr;
+  }
+
+  .luck-wrapper {
+    grid-column: span 2;
   }
 
   .items {

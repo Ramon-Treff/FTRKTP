@@ -19,9 +19,8 @@ export class GenderNeutralGuyModel extends foundry.abstract.TypeDataModel {
         trick: new fields.NumberField(),
         confidence: new fields.NumberField(),
       }),
-      // age: new fields.StringField(),
-      // personality: new fields.StringField(),
-      // appearance: new fields.StringField(),
+      luck: new fields.NumberField(),
+      luckMax: new fields.NumberField(),
     };
   }
   prepareBaseData() {
@@ -31,10 +30,6 @@ export class GenderNeutralGuyModel extends foundry.abstract.TypeDataModel {
     this.stats.mind = this.stats.mind || 0;
     this.stats.aura = this.stats.aura || 0;
 
-    // this.stats.age = this.stats.age || "";
-    // this.stats.appearance = this.stats.appearance || "";
-    // this.stats.personality = this.stats.personality || "";
-
     this.attributeModifiers.fit = this.attributeModifiers.fit || 0;
     this.attributeModifiers.will = this.attributeModifiers.will || 0;
     this.attributeModifiers.hot = this.attributeModifiers.hot || 0;
@@ -42,6 +37,8 @@ export class GenderNeutralGuyModel extends foundry.abstract.TypeDataModel {
     this.attributeModifiers.trick = this.attributeModifiers.trick || 0;
     this.attributeModifiers.confidence =
       this.attributeModifiers.confidence || 0;
+    this.luck = this.luck || 0;
+    this.luckMax = this.luckMax || 0;
   }
 
   prepareDerivedData() {

@@ -14,11 +14,12 @@ export default class guyActorSheet extends ActorSheet {
   getData(options) {
     const data = super.getData(options);
     data.stats = data.actor.system.stats;
+    data.luck = data.actor.system.luck;
+    data.luckMax = data.actor.system.luckMax;
     data.attributeModifiers = data.actor.system.attributeModifiers;
     data.age = data.actor.system.age;
     data.personality = data.actor.system.personality;
     data.appearance = data.actor.system.appearance;
-    console.log(data);
 
     return data;
   }
