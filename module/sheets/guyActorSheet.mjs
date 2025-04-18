@@ -69,25 +69,39 @@ export default class guyActorSheet extends ActorSheet {
     const diceResults = roll.dice[0].results.map((result) => {
       return result.result;
     });
-    // TODO fix this ;)
     let successes = 0;
-    let failures = 0;
     diceResults.forEach((res) => {
       if (res === 10) {
-        failures++;
+        successes--;
       }
       if (res === 1) {
         successes++;
       }
       if (res <= skillValue) {
         successes++;
-      } else {
-        failures++;
       }
     });
 
-    const successIcons = "✅".repeat(successes);
-    const failureIcons = "❌".repeat(failures);
+    const successIcon = "✅";
+    const failureIcon = "❌";
+    let icons = "";
+    let style = "text-align: center;";
+    let text = "No Successes or Failures";
+    if (successes == 4) {
+      text = "Critical Success!";
+      icons = successIcon.repeat(5);
+      style += "color: green; font-weight: bold;";
+    } else if (successes > 0) {
+      text = `Successes: ${successes}`;
+      icons = successIcon.repeat(successes);
+    } else if (successes == -2) {
+      text = "Critical Failure!";
+      icons = failureIcon.repeat(5);
+      style += "color: #a82121; font-weight: bold;";
+    } else if (successes < 0) {
+      text = `Failures: ${Math.abs(successes)}`;
+      icons = failureIcon.repeat(Math.abs(successes));
+    }
 
     // Ensure Foundry's dice roll display appears in chat
     await roll.toMessage(
@@ -95,13 +109,15 @@ export default class guyActorSheet extends ActorSheet {
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: `Rolling for ${skill || "an action"}!`,
         content: `
-        <div style="text-align: center;">
-          <strong>Rolls</strong><br>
-          ${diceResults.join(" + ")}<br>
-        </div>
-        <div style="text-align: center;">
-          <strong>Successes & Failures</strong><br>
-          ${successIcons} ${failureIcons}
+        <div style="${style}">
+          <div>
+            <strong>Rolls</strong><br>
+            ${diceResults.join(" + ")}<br>
+          </div>
+          <div style="text-align: center; color: inherit;">
+            <strong>${text}</strong><br>
+            ${icons}
+          </div>
         </div>
       `,
       },
